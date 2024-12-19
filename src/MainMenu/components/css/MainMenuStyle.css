@@ -250,14 +250,11 @@ body {
 /* Estilos principais para dispositivos móveis */
 @media (max-width: 480px) {
   .hero_container {
-    padding-top: 1em;
-    margin-top: -10vw;
-    scale: 1;
-    display: flex;
     flex-direction: column;
-    /* Coloca os elementos em coluna */
     justify-content: center;
     align-items: center;
+    padding: 1px;
+    max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho do container */
   }
 
   .textCarrosel h2 {
@@ -270,17 +267,15 @@ body {
 
   .hero {
     text-align: center;
-    /* Centraliza o texto para melhor legibilidade */
     translate: 0 0;
     scale: 1.1;
-    /* Remove o deslocamento */
+    display: flex;
+    flex-direction: column; /* Organiza os elementos em coluna */
+    gap: 20px; /* Define o espaçamento de 20px entre os elementos */
   }
 
   .hero_text {
     text-align: center;
-    /* Ajusta o alinhamento para centralizar */
-    translate: 0 0;
-    /* Remove o deslocamento */
   }
 
   .hero__title {
@@ -293,6 +288,7 @@ body {
     margin-top: 5px;
     line-height: 1.2;
     /* Ajusta o espaçamento entre linhas */
+    width: 200%;
   }
 
   .hero__globe {
@@ -783,6 +779,16 @@ body {
   background-size: cover; /* A imagem vai cobrir toda a área do container sem distorção */
   background-repeat: no-repeat;
 }
+
+@media (max-width: 480px){
+  .donation_container{
+    background-size: 100% 146%; /* Ajusta a imagem para ser contida na tela, sem cortar */
+    height: 100%; /* Deixa a altura do container ajustável */
+    width: 100%;
+  }
+}
+
+
 
 .donation {
   margin-top: 20rem;
